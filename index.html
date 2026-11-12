@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/fe407f4ec9.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
+    <script src="index.js"></script>
   </head>
   <body>
     <section id="landing">
@@ -20,16 +21,31 @@
             <li><a href="#" class="nav__link">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
           </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Home</a></li>
+            <li class="menu__list"><a href="#features" class="menu__link" onclick="closeMenu()">Books</a></li>
+            <li class="menu__list"><a href="#" class="menu__link no-cursor" onclick="closeMenu()">Contact</a></li>
+          </ul>
         </div>
+      </div>  
       </nav>
-      <header>
+     <header>
         <div class="header__container">
           <div class="header__description">
             <h1>Arizona's most awarded online platform</h1>
             <h2>
               Find your dream book with <span class="purple">Library</span>
             </h2>
-            <button class="btn">Browse Books</button>
+            <a href="#features">
+              <button class="btn">Browse Books</button>
+            </a>
           </div>
           <figure class="header__img--wrapper">
             <img src="./assets/Undraw_Books.svg" alt="" />
@@ -174,7 +190,7 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$59.95</span>
+                  <span class="book__price">$59.95</span>
                 </div>
               </div>
               <div class="book">
@@ -192,7 +208,7 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$59.95</span>
+                  <span class="book__price">$59.95</span>
                 </div>
               </div>
               <div class="book">
@@ -210,7 +226,7 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$59.95</span>
+                  <span class="book__price">$59.95</span>
                 </div>
               </div>
               <div class="book">
@@ -228,7 +244,7 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$59.95</span>
+                  <span class="book__price">$59.95</span>
                 </div>
               </div>
               <div class="book">
@@ -246,7 +262,7 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$59.95</span>
+                  <span class="book__price">$59.95</span>
                 </div>
               </div>
               <div class="book">
@@ -264,7 +280,7 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$59.95</span>
+                  <span class="book__price">$59.95</span>
                 </div>
               </div>
               <div class="book">
@@ -282,7 +298,7 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$59.95</span>
+                  <span class="book__price">$59.95</span>
                 </div>
               </div>
               <div class="book">
@@ -300,22 +316,40 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$59.95</span>
+                  <span class="book__price">$59.95</span>
                 </div>
               </div>
             </div>  
           </div>
       </section>
-      <section class="explore">
-      <div class="explore__container">
-        <div class="explore__description">
-        <h2>Explore more <span class="purple">Books</span></h2>
-        <button class="btn">Browse Books</button>
+      <section id="explore">
+        <div class="container">
+         <div class="row row__column">
+          <h2>Explore more <span class="purple">Books</span></h2>
+          <a href="#features">
+            <button class="btn">Browse Books</button>
+          </a>
+          </div>
         </div>
-      </div>
-    </section>
+     </section>
     </main>
   </body>
-  <footer>
+  <footer id="footer">
+    <div class="container">
+      <div class="row row__column">
+        <a href="#">
+          <figure class="footer__logo">
+            <img src="./assets/Library.svg" class="footer__logo--img">
+          </figure>
+        </a>
+        <div class="footer__list">
+          <a href="" class="footer__link">Home</a>
+          <a href="" class="footer__link no-cursor">About</a>
+          <a href="" class="footer__link">Books</a>
+          <a href="" class="footer__link no-cursor">Content</a>
+        </div>  
+        <div class="footer__copyright">Copyright &copy; 2021 Library</div>
+      </div>
+    </div>
   </footer>
 </html>
